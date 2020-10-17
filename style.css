@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+body{
+    font-family: "Roboto Mono", 'Courier New', Courier, monospace;
+    background-color: black;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 20px 0px;
+    border-bottom: 1px solid rgb(124, 121, 121);
+    width: 100%;
+    background-color: black;
+
+}
+nav .logo h4{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+}
+
+
+
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+    padding: 15px
+}
+.btn-toggle{
+    display: none;
+}
+.container {
+    position: absolute;
+    margin: 100px 40px;
+    height: 1000px;
+    width: 1000px;
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    nav .logo h4{
+        width: 200px;
+        padding-left: 150px;
+        
+    }
+    nav ul {
+        width: 50%;
+    }
+    nav ul li {
+        padding-right: 50px;
+    }
+    nav ul li a {
+        font-size: 30px;
+        justify-content: space-around;
+    }
+    .btn-toggle{
+        display: none;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+    nav {
+        border-bottom: 1px solid rgb(124, 121, 121);
+    }
+    nav ul {
+        display: none;
+    }
+    nav .logo h4{
+        width: 800px;
+        font-size: 50px;
+        padding-left: 590px;
+    }
+   
+    .btn-toggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        float: right;
+    }
+    .btn-toggle span{
+        display: block;
+        height:3px;
+        width: 50px;
+        background-color: #fff;
+        border-radius: 3px;
+        margin-left: 6px;
+        
+    }
+    .btn-toggle input{
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+
